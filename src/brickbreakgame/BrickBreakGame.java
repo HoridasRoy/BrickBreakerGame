@@ -20,14 +20,16 @@ public class BrickBreakGame {
         // TODO code application logic here
         
         JFrame ob = new JFrame();
-        GamePlay ob1 = new GamePlay();
+        GamePlay gameplay = new GamePlay();
         ob.setBounds(10, 20, 800, 600);
-        ob.setVisible(true);
+        ob.setTitle("BrickBreakerGame");
         ob.setResizable(false);
-        ob.setTitle("BrickBreakGame");
-        
+        ob.setVisible(true);
+
         ob.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        ob.add(ob1);
+        ob.add(gameplay);
+        
+        
     }
     
 }
