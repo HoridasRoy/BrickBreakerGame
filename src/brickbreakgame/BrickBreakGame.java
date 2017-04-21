@@ -25,6 +25,10 @@ public class BrickBreakGame {
         ob.setTitle("BrickBreakerGame");
         ob.setResizable(false);
         ob.setVisible(true);
+        
+        
+        
+        
 
         ob.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ob.add(gameplay);

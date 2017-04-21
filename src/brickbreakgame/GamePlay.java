@@ -7,6 +7,7 @@ package brickbreakgame;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -38,10 +39,14 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
 
     private int ballXdir = -1;
     private int ballYdir = -2;
+    
+    private BrickGenerator map;
 
     
 
     public GamePlay() {
+        
+        map = new  BrickGenerator(3, 7);
 
         addKeyListener(this);
         setFocusable(true);
@@ -55,6 +60,10 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
         //background
         g.setColor(Color.black);
         g.fillRect(1, 1, 792, 592);
+        
+        
+        // drawing ball
+        map.draw((Graphics2D)g);
 
         //boders
         g.setColor(Color.red);
@@ -130,6 +139,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
         
         if(play)
         {
+            
             
             
             if(new Rectangle(ballposX, ballposY, 20, 20).intersects(playerX,550,100,8)){
